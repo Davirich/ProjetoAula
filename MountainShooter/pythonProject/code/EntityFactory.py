@@ -15,10 +15,18 @@ class EntityFactory:
         match entity_name:
             case 'Level1Bg':
                 lista_bg = []
-                for i in range(7):
+                for i in range(7):  # numero de sprites que compoem esse mapa
                     lista_bg.append(Background(f'Level1Bg{i}', (0, 0)))
                     lista_bg.append(Background(f'Level1Bg{i}', (WIN_WIDTH, 0)))
                 return lista_bg
+
+            case 'Level2Bg':
+                lista_bg = []
+                for i in range(5):
+                    lista_bg.append(Background(f'Level2Bg{i}', (0, 0)))
+                    lista_bg.append(Background(f'Level2Bg{i}', (WIN_WIDTH, 0)))
+                return lista_bg
+
             case 'Player1':
                 return Player('Player1', (10, WIN_HEIGHT / 2 - 30))
             case 'Player2':
